@@ -66,30 +66,36 @@ main{
     display: none;
 }
 
+
+
 /* lista home */
 
 .img-list{
-    width: 15%;
+    width: 35px;
     vertical-align: middle;
     padding-left: 10px;
 }
 
 .home-list{
-    line-height: 30px;  
+    line-height: 30px;
+    color: #6d6d6d;  
 }
 
 .home{
     border-left: 2px solid greenyellow;
 }
 
+.home-list a:hover{
+    color: var(--written);
+}
+
 /* lista Playlist */
 
-nav h4{
+.list-playlist h4{
     padding: 15px 0 10px 10px;
 }
 
 .playlist i{
-    
     font-size: 40px;
     vertical-align: middle;
     padding-right: 10px;
@@ -100,17 +106,69 @@ nav h4{
     line-height: 35px;
     padding-left: 10px;
     color: #6d6d6d;
+}
 
+.playlist a:hover{
+    color: white;
+}
+
+/* inizio user-list */
+
+.download{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.logo-download{
+    width: 20px;
+    vertical-align: middle;
+}
+.user-list hr{
+    width: 90%;
+    margin: 0 auto;
+}
+.user{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.logo-user{
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    border-radius: 50%;
+    vertical-align: middle;   
 }
 
 
+
+/* inizio main content */
+
+.main-menu{
+    width: 80%;
+    margin: 0 auto;
+}
 .main-content{
     padding-top: 100px;
     width: calc(100% - 250px);
     background-color: #141922;
     overflow-y: auto;  
 }
+.main-menu ul{
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--written);    
+}
 
+
+
+
+
+
+
+
+
+/* inizio upgare */
 .upgrade{
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--written); 
@@ -119,9 +177,24 @@ nav h4{
     right: 0;
     height: 80px;
     width: calc(100% - 250px);
-    text-align: end;
-    
+    justify-content: flex-end;  
+    align-items: center;
 }
+
+.btn{
+    display: inline-block;
+    font-size: 10px;
+    margin-right: 20px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 30px
+}
+.btn:hover{
+    transform: scale(120%);
+}
+/* fine upgrade */
+
 
 
 /* FOOTER */
@@ -135,11 +208,15 @@ footer{
     z-index: 1;
 }
 
+/*----------------------------------------
+                    XS
+-----------------------------------------*/
 
 @media screen and ( max-width: 600px ) {
 
     .left-nav{
-        width: 60px;   
+        width: 60px;
+        text-align: center;
     }
     
     .main-content{
@@ -151,14 +228,19 @@ footer{
 
     }
 
-    .logo{
+    .logo-big{
         display: none;
     }
-
+    
     .logo-small{
-        display: in;
-        width: 100%;
+        display: inline;
+        width: 35px;   
     }
+
+    .img-list{
+        padding-left: 0;
+    }
+    
 
     .list-playlist{
         display: none;
@@ -166,6 +248,5 @@ footer{
 
     .home-list a{
         display: none;
-
     }
 }
