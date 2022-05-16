@@ -1,10 +1,171 @@
+/* VARIABLES */
+:root {
+    --written: #ffffff;
+  }
+
+
 /* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/* COMMON */
 
 body{
     font-family: 'Montserrat', sans-serif;
+}
+
+.flex-container{
+    display: flex;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    width: 100%;
+}
+
+/* contenitore di tutta la pagina */
+.app-wrapper{
+    width: 100%;
+    height: 100vh;
+    min-width: 550px;
+}
+
+
+
+/* MAIN */
+
+main{
+    width: 100%;
+    height: calc(100% - 100px);
+
+}
+
+.left-nav{
+    background-color: black;
+    color: var(--written); 
+    width: 250px;
+    overflow: hidden;
+}
+
+.logo{
+    width: 60%;
+    margin: 20px 0 25px 15px;    
+}
+
+.logo-small{
+    display: none;
+}
+
+/* lista home */
+
+.img-list{
+    width: 15%;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+
+.home-list{
+    line-height: 30px;  
+}
+
+.home{
+    border-left: 2px solid greenyellow;
+}
+
+/* lista Playlist */
+
+nav h4{
+    padding: 15px 0 10px 10px;
+}
+
+.playlist i{
+    
+    font-size: 40px;
+    vertical-align: middle;
+    padding-right: 10px;
+
+}
+
+.playlist{
+    line-height: 35px;
+    padding-left: 10px;
+    color: #6d6d6d;
+
+}
+
+
+.main-content{
+    padding-top: 100px;
+    width: calc(100% - 250px);
+    background-color: #141922;
+    overflow-y: auto;  
+}
+
+.upgrade{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--written); 
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 80px;
+    width: calc(100% - 250px);
+    text-align: end;
+    
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: #282828;
+    color: var(--written); 
+    width: 100%;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+
+@media screen and ( max-width: 600px ) {
+
+    .left-nav{
+        width: 60px;   
+    }
+    
+    .main-content{
+    width: calc(100% - 60px); 
+    }
+
+    .upgrade{
+        width: calc(100% - 60px);
+
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .logo-small{
+        display: in;
+        width: 100%;
+    }
+
+    .list-playlist{
+        display: none;
+    }
+
+    .home-list a{
+        display: none;
+
+    }
 }
