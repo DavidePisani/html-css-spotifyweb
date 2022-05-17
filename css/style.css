@@ -3,7 +3,6 @@
     --written: #ffffff;
   }
 
-
 /* RESET */
 *{
     margin: 0;
@@ -11,7 +10,6 @@
     box-sizing: border-box;
 }
 /* COMMON */
-
 body{
     font-family: 'Montserrat', sans-serif;
 }
@@ -32,15 +30,12 @@ a{
 img{
     width: 100%;
 }
-
 /* contenitore di tutta la pagina */
 .app-wrapper{
     width: 100%;
     height: 100vh;
     min-width: 550px;
 }
-
-
 
 /* MAIN */
 
@@ -66,8 +61,6 @@ main{
 .logo-small{
     display: none;
 }
-
-
 
 /* LISTA HOME */
 
@@ -109,7 +102,6 @@ main{
     font-size: 40px;
     vertical-align: middle;
     padding-right: 10px;
-
 }
 
 .playlist{
@@ -119,19 +111,23 @@ main{
     padding-left: 10px;
     color: #6d6d6d;
 }
+.list-playlist a{
+    color:#6d6d6d ;    
+}
 
-.playlist a:hover{
-    color: white;
+.list-playlist i{
+    padding-right: 5px;
+}
+
+.list-playlist a:hover{
+    color: var(--written);
 }
 
 /* LISTA USER */
-
 .user-list{
     background-color: black;
-    padding: 10px;
-    
+    padding: 10px;   
 }
-
 
 .logo-download{
     width: 20px;
@@ -143,6 +139,14 @@ main{
 }
 .user-list hr{
     width: 220px;
+}
+
+.download a{
+    color: #6d6d6d;
+}
+
+.download a:hover{
+    color: var(--written);
 }
 
 .user{
@@ -169,6 +173,7 @@ main{
     width: calc(100% - 250px);
     justify-content: flex-end;  
     align-items: center;
+    z-index: 25;
 }
 
 .btn{
@@ -180,11 +185,10 @@ main{
     border-radius: 20px;
     padding: 10px 30px
 }
+
 .btn:hover{
     transform: scale(120%);
 }
-
-
 /* INIZIO MAIN CONTENT */
 
 /* INIZIO LISTA MENU' */
@@ -211,9 +215,10 @@ main{
     line-height: 100px;
 }
 
-.select{
-    border-bottom: 1px solid greenyellow;
-    
+.select a::after{
+    content: "IN EVIDENZA";
+    padding: 5px;
+    border-bottom: 2px solid greenyellow;   
 }
 
 .main-list a:hover{
@@ -242,12 +247,45 @@ main{
     margin: 0 10px 10px 0;
 }
 
+.container-img{
+    position: relative;
+}
+
+.container-img img:hover{
+    opacity: 0.5;
+}
+
+.play-img i{
+    font-size: 50px;
+    color: white;
+}
+
+.play-img {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container-img:hover .play-img{
+    opacity: 1;
+}
+
+.card img{
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+}
+
 .description-music{
     text-align: center;
     line-height: 30px;
 }
-/* CREATO PER TE */
 
+/* CREATO PER TE */
 .for-you{
     margin-top: 15px;
     line-height: 30px;
@@ -257,7 +295,20 @@ main{
     margin-bottom: 20px;
 }
 
+/* PIU POPOLARI */
 
+.popular{
+    margin-top: 15px;
+    line-height: 30px;
+}
+
+.popular h5{
+    margin-bottom: 20px;
+}
+
+.round-img{
+    border-radius: 50%;
+}
 
 /* FOOTER */
 
@@ -265,10 +316,164 @@ footer{
     background-color: #282828;
     color: var(--written); 
     width: 100%;
+    min-width: 600px;
     height: 100px;
     position: relative;
-    z-index: 1;
+    z-index: 50;
 }
+
+.player{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    
+}
+/* SINISTRA */
+.left-play{
+    align-items: center;
+    width: 30% ;
+    height: 50%;
+}
+
+.img-play{
+    width: 50px;
+    height: 50px;
+}
+
+.song{
+    padding-left: 10px;
+}
+
+.song h4{
+    font-size: 12px;
+}
+
+.song a{
+    font-size: 10px;
+}
+
+.song a:hover{
+    text-decoration: underline;
+}
+
+.icon-play{
+    padding-left: 10px;
+    color: #6d6d6d;
+}
+
+.icon-play i{
+    padding-left: 10px;
+}
+
+.icon-play i:hover{
+    color: var(--written);
+}
+
+/* CENTRO */
+.cent-play{
+    width: 60%;
+    height: 60%;
+}
+
+.icon-cent-play{
+    text-align: center;    
+}
+
+.icon-cent-play i{
+    padding: 0 10px 15px 0;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.btn-play > i{
+    font-size: 30px; 
+}
+
+.btn-play i:hover{
+    transform: scale(110%);
+}
+
+.time-bar{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.time-bar span{
+    font-size: 10px;
+}
+
+.time-bar span:first-child{
+    padding-right: 20px;
+}
+
+.time-bar span:last-child{
+    padding-left: 20px;
+}
+
+.time{
+    background-color: grey;
+    justify-content: center;
+    width: 350px;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.timeline{
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--written);
+}
+
+
+/* DESTRA */
+.right-play{
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 30%;
+    height: 50%;
+}
+
+.icon-right-play{
+    padding-right: 5px;
+}
+
+.icon-right-play i{
+    padding-right: 15px;
+}
+
+.soundbar{
+    background-color: grey;
+    width: 110px;
+    height: 5px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.sound{
+    width: 30px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--written);
+}
+
+.sound:hover.circle{
+    background-color: green;
+    display: block;   
+}
+
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    align-items: flex-end;
+    background-color: var(--written);
+    display: none;
+}
+
 
 /*----------------------------------------
                     MD
