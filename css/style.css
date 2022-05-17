@@ -55,7 +55,7 @@ main{
     color: var(--written); 
     width: 250px;
     overflow: hidden;
-    position: relative;
+    flex-direction: column;
 }
 
 .logo{
@@ -92,8 +92,17 @@ main{
 
 /* LISTA PLAYLIST */
 
+.list-playlist{
+    flex-grow: 1;
+}
+
 .list-playlist h4{
     padding: 15px 0 10px 10px;
+}
+.list-playlist i{
+    font-size: 30px;
+    padding-left: 10px;
+    vertical-align: middle;
 }
 
 .playlist i{
@@ -104,6 +113,8 @@ main{
 }
 
 .playlist{
+    height: 60%;
+    overflow-y: auto;
     line-height: 35px;
     padding-left: 10px;
     color: #6d6d6d;
@@ -116,9 +127,6 @@ main{
 /* LISTA USER */
 
 .user-list{
-    position: absolute;
-    bottom: 0;
-    left: 0;
     background-color: black;
     padding: 10px;
     
@@ -213,7 +221,7 @@ main{
     margin: 0 auto;
     color: var(--written);
 }
-
+/* RIPRODOTTI DI RECENTE */
 .recently h2{
     
     margin-bottom: 20px;
@@ -221,16 +229,28 @@ main{
 }
 
 .card-container{
-    width: calc(100% / 6 - 10px);
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .card{
-    width: 200px;
-    height: 200px;    
+    width: calc((100% / 6) - 10px);
+    margin: 0 10px 10px 0;
 }
 
+.description-music{
+    text-align: center;
+    line-height: 30px;
+}
+/* CREATO PER TE */
+
+.for-you{
+    margin-top: 15px;
+    line-height: 30px;
+}
+
+.for-you h5{
+    margin-bottom: 20px;
+}
 
 
 
@@ -246,6 +266,25 @@ footer{
 }
 
 /*----------------------------------------
+                    MD
+-----------------------------------------*/
+@media screen and ( max-width: 1100px) {
+    .card{
+        width: calc((100% / 4) - 10px);
+    }
+}
+
+/*----------------------------------------
+                    S
+-----------------------------------------*/
+@media screen and ( max-width: 700px){
+    .card{
+        width: calc((100% / 2) - 10px);
+    }
+
+}
+
+/*----------------------------------------
                     XS
 -----------------------------------------*/
 
@@ -255,7 +294,7 @@ footer{
         width: 60px;
         text-align: center;
     }
-
+    /* ALTERNANZA LOGHI */
     .logo-big{
         display: none;
     }
@@ -264,12 +303,16 @@ footer{
         display: inline;
         width: 35px;   
     }
-
+    /* HOME LIST*/
     .img-list{
         padding-left: 0;
     }
-    
 
+    .home{
+        border-left: 0;
+    }
+    
+    /* LIST PLAYLIST */
     .list-playlist{
         display: none;
     }
@@ -278,12 +321,17 @@ footer{
         display: none;
     }
 
+    /* USER LIST */
     .user-list hr{
         display: none;
     }
 
     .user-list a{
         display: none;
+    }
+
+    .home-list{
+        flex-grow: 1;
     }
 
     .download {
@@ -305,8 +353,6 @@ footer{
     .main-content{
     width: calc(100% - 60px); 
     }
-
    
-
-    
 }
+
