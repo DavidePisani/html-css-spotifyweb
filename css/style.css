@@ -211,6 +211,11 @@ main{
     line-height: 100px;
 }
 
+.select{
+    border-bottom: 1px solid greenyellow;
+    
+}
+
 .main-list a:hover{
     color: var(--written);
 }
