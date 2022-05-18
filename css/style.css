@@ -55,7 +55,7 @@ main{
 
 .logo{
     width: 60%;
-    margin: 20px 0 25px 15px;    
+    padding: 20px 0 25px 15px;    
 }
 
 .logo-small{
@@ -333,7 +333,7 @@ footer{
 /* SINISTRA */
 .left-play{
     align-items: center;
-    width: 30% ;
+    /* width: 30% ; */
     height: 50%;
 }
 
@@ -433,7 +433,7 @@ footer{
 .right-play{
     align-items: center;
     flex-direction: row-reverse;
-    width: 30%;
+    /* width: 30%; */
     height: 50%;
 }
 
@@ -460,9 +460,12 @@ footer{
     background-color: var(--written);
 }
 
-.sound:hover.circle{
+.soundbar:hover .sound{
     background-color: green;
-    display: block;   
+}
+
+.soundbar:hover .circle{
+    display: block;
 }
 
 .circle{
@@ -511,11 +514,12 @@ footer{
     
     .logo-small{
         display: inline;
-        width: 35px;   
+        width: 35px; 
     }
     /* HOME LIST*/
     .img-list{
         padding-left: 0;
+        width: 30px;
     }
 
     .home{
