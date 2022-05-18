@@ -208,17 +208,15 @@ main{
     color: #75777c    
 }
 
+.select a::after{
+    content: "";
+}
+
 .main-list li{
     padding-left: 10px;
     font-size: 15px;
     font-weight: bolder;
     line-height: 100px;
-}
-
-.select a::after{
-    content: "IN EVIDENZA";
-    padding: 5px;
-    border-bottom: 2px solid greenyellow;   
 }
 
 .main-list a:hover{
@@ -330,10 +328,9 @@ footer{
     padding: 0 10px;
     
 }
-/* SINISTRA */
+/* PLAYER SINISTRA */
 .left-play{
     align-items: center;
-    /* width: 30% ; */
     height: 50%;
 }
 
@@ -371,9 +368,9 @@ footer{
     color: var(--written);
 }
 
-/* CENTRO */
+/* PLAYER CENTRO */
 .cent-play{
-    width: 60%;
+    width: 40%;
     height: 60%;
 }
 
@@ -421,6 +418,13 @@ footer{
     border-radius: 5px;
 }
 
+.time:hover .circle-time{
+    display: block;
+}
+
+.time:hover .timeline{
+    background-color: green;
+}
 .timeline{
     width: 50px;
     height: 5px;
@@ -428,17 +432,27 @@ footer{
     background-color: var(--written);
 }
 
+.circle-time{
+    bottom: 10px;
+    position: relative;
+    left: 40px;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background-color: var(--written);
+    display: none;
+}
 
-/* DESTRA */
+
+/* PLAYER DESTRA */
 .right-play{
     align-items: center;
-    flex-direction: row-reverse;
-    /* width: 30%; */
     height: 50%;
 }
 
 .icon-right-play{
-    padding-right: 5px;
+    max-width: 300px;
+    flex-wrap: nowrap;
 }
 
 .icon-right-play i{
@@ -469,10 +483,11 @@ footer{
 }
 
 .circle{
+    position: relative;
+    right: 5px;
     width: 15px;
     height: 15px;
     border-radius: 10px;
-    align-items: flex-end;
     background-color: var(--written);
     display: none;
 }
