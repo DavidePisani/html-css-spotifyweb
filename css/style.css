@@ -196,29 +196,32 @@ main{
     width: 90%;
     margin: 0 auto;
 }
+
 .main-content{
-    padding-top: 60px;
+    padding-top: 100px;
     width: calc(100% - 250px);
     background-color: #141922;
     overflow-y: auto;  
 }
+
 .main-list{
     justify-content: center;
     flex-wrap: wrap;
-    color: #75777c    
+    color: #75777c;      
 }
 
 .select a div{
+    width: 50px;
+    margin: 1px auto;
+    height: 3px;
     background-color: greenyellow;
-    width: 10px;
-    height: 5px;
 }
 
 .main-list li{
     padding-left: 10px;
     font-size: 15px;
     font-weight: bolder;
-    line-height: 100px;
+    padding-bottom: 30px;
 }
 
 .main-list a:hover{
@@ -230,6 +233,10 @@ main{
     width: 95%;
     margin: 0 auto;
     color: var(--written);
+}
+
+.music h5{
+    color: #6d6d6d;
 }
 /* RIPRODOTTI DI RECENTE */
 .recently h2{
@@ -251,13 +258,13 @@ main{
     position: relative;
 }
 
-.container-img img:hover{
+.card:hover img{
     opacity: 0.5;
 }
 
 .play-img i{
     font-size: 50px;
-    color: white;
+    color: var(--written);
 }
 
 .play-img {
@@ -268,7 +275,8 @@ main{
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.container-img:hover .play-img{
+
+.card:hover .play-img{
     opacity: 1;
 }
 
@@ -282,7 +290,17 @@ main{
 
 .description-music{
     text-align: center;
-    line-height: 30px;
+    margin-top: 15px;
+}
+
+.description-music h4{
+    margin-bottom: 10px;
+    font-size: 15px; 
+}
+
+.description-music span{
+    color: #6d6d6d;
+    font-size: 15px;    
 }
 
 /* CREATO PER TE */
@@ -296,7 +314,6 @@ main{
 }
 
 /* PIU POPOLARI */
-
 .popular{
     margin-top: 15px;
     line-height: 30px;
@@ -311,7 +328,6 @@ main{
 }
 
 /* FOOTER */
-
 footer{
     background-color: #282828;
     color: var(--written); 
@@ -327,8 +343,7 @@ footer{
     height: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
-    
+    padding: 0 10px;    
 }
 /* PLAYER SINISTRA */
 .left-play{
@@ -427,6 +442,7 @@ footer{
 .time:hover .timeline{
     background-color: green;
 }
+
 .timeline{
     width: 50px;
     height: 5px;
@@ -444,7 +460,6 @@ footer{
     background-color: var(--written);
     display: none;
 }
-
 
 /* PLAYER DESTRA */
 .right-play{
@@ -493,7 +508,6 @@ footer{
     display: none;
 }
 
-
 /*----------------------------------------
                     MD
 -----------------------------------------*/
@@ -502,7 +516,6 @@ footer{
         width: calc((100% / 4) - 10px);
     }
 }
-
 /*----------------------------------------
                     S
 -----------------------------------------*/
@@ -510,9 +523,7 @@ footer{
     .card{
         width: calc((100% / 2) - 10px);
     }
-
 }
-
 /*----------------------------------------
                     XS
 -----------------------------------------*/
@@ -582,7 +593,6 @@ footer{
     /* MAIN CONT */
     .main-content{
     width: calc(100% - 60px); 
-    }
-   
+    }  
 }
 
