@@ -208,8 +208,10 @@ main{
     color: #75777c    
 }
 
-.select a::after{
-    content: "";
+.select a div{
+    background-color: greenyellow;
+    width: 10px;
+    height: 5px;
 }
 
 .main-list li{
@@ -451,7 +453,6 @@ footer{
 }
 
 .icon-right-play{
-    max-width: 300px;
     flex-wrap: nowrap;
 }
 
